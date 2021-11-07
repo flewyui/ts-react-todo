@@ -1,4 +1,4 @@
-# You can play this app at this URL
+You can play this app at this URL
 https://flewyui.github.io/ts-react-todo/
 # Getting Started with Create React App
 
