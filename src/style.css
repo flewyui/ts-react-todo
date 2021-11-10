@@ -9,6 +9,9 @@
 .header {
     margin: 0 15px;
 }
+.header a {
+    cursor: pointer;
+}
 .filter_input {
     display: flex;
     justify-content: space-around;
@@ -32,6 +35,6 @@
         display: block;
     }
     .task_form {
-        margin: 20px 0;
+        margin: 40px 0;
     }
 }

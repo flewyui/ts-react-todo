@@ -108,7 +108,13 @@ const App: React.VFC = () => {
 
     return (
         <div className='wrapper'>
-            <div className='header'><h2><a href="/">Todo</a></h2></div>
+            <div className='header'>
+                <h2>
+                    <a href="/#" onClick={() => window.location.reload()}>
+                        Todo
+                    </a>
+                </h2>
+            </div>
             <div className='filter_input'>
                 <FormControl>
                     <InputLabel id="demo-simple-select-label">Filter</InputLabel>
@@ -137,7 +143,9 @@ const App: React.VFC = () => {
                         <Button
                             type="submit"
                             variant="contained"
+                            size="small"
                             disabled={filter === 'checked'}
+                            style={{ verticalAlign: 'bottom' }}
                         >
                             追加
                         </Button>
@@ -149,6 +157,7 @@ const App: React.VFC = () => {
                     <Button
                         variant="contained"
                         disabled={todos.filter(todo => todo.removed).length === 0}
+                        size="small"
                         onClick={() => handleOnEmpty()}
                     >
                         ゴミ箱を空にする
@@ -174,6 +183,7 @@ const App: React.VFC = () => {
                             <Button
                                 type="submit"
                                 variant="contained"
+                                size="small"
                                 onClick={() => handleOnDelete(todo.id, todo.removed)}
                             >
                                 {todo.removed ? '復元' : '削除'}
