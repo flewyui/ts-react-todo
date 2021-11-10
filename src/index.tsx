@@ -102,6 +102,11 @@ const App: React.VFC = () => {
         })
         setTodos(newTodos)
     }
+    const reset = () => {
+        setText('')
+        setTodos([])
+        setFilter('all')
+    }
     useEffect(() => {
         document.title = `TODO: ${translatedFilter(filter)}`
     }, [filter])
@@ -109,10 +114,8 @@ const App: React.VFC = () => {
     return (
         <div className='wrapper'>
             <div className='header'>
-                <h2>
-                    <a href="/#" onClick={() => window.location.reload()}>
-                        Todo
-                    </a>
+                <h2 onClick={() => reset()}>
+                    Todo
                 </h2>
             </div>
             <div className='filter_input'>

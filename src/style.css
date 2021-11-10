@@ -9,7 +9,7 @@
 .header {
     margin: 0 15px;
 }
-.header a {
+.header h2 {
     cursor: pointer;
 }
 .filter_input {
